@@ -1,0 +1,108 @@
+/* reset */
+*
+{
+    margin: 0; /* espacio exterior del elem */
+    padding: 1px; /* espacio interior del elem */
+    box-sizing: border-box;
+}
+
+body 
+{
+    /* fuentes y fuentes externas*/
+    /* herencia */
+    font-family: 'Roboto', sans-serif;
+    /* colores y colores de fondo */
+    /* color name - rgb() - hex */
+}
+
+h1 
+{
+    /* tranformar a mayus */
+    text-transform: uppercase;
+    /* centrar texto */
+    text-align: center;
+}
+
+.tarjeta
+{
+    width: 370px;
+    padding: 20px;
+    margin: auto; /* centra el elmento horizontalmente */
+    border-radius: 10px;
+    /* tarea: investigar como utilizar */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(249,183,43,0.76234243697479) 100%);
+}
+
+#imagen-perfil
+{
+    width: 100%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /*cover - contain*/
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+}
+
+.tarjeta-nombre
+{
+    font-size: 23px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.tarjeta-descripcion
+{
+    font-size: 16px;
+    color: #272626;
+    text-align: center; /* justify */
+}
+
+
+.tarjeta-descripcion::before
+{
+    content: '🎬 ';
+}
+
+  /* cuando yo le haga hover al selector, al before del elemento aplicale los siguientes estilos */
+.tarjeta-descripcion:hover::before
+{
+    background-color: chocolate;
+}
+
+.tarjeta-descripcion::after
+{
+    content: ' 🎮';
+}
+
+.botones
+{
+    min-width: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botones a
+{
+    margin: .6em .2em;
+    text-decoration: none;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #004085;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(231, 9, 9, 0.5);
+    transition: all .4s ease-in-out;
+}
+
+.botones a:hover
+{
+    transform: scale(1.2);
+}
